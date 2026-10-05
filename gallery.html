@@ -9,45 +9,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="gallery-page">
 
 <div id="toast-success">✅ Message Sent! We will contact you shortly.</div>
 
-<!-- Header will be loaded here -->
 <div id="header-placeholder"></div>
 
 <main>
-    <!-- Hero Section -->
-    <section class="gallery-hero">
-        <div class="container">
-            <h1>Our Visual Journey</h1>
-            <p>Explore the beauty of our craftsmanship through captivating visuals</p>
-        </div>
-    </section>
 
-    <!-- Gallery Grid -->
-    <section class="gallery-grid-section">
+    <!-- 1. HERO -->
+    <section class="gl-hero">
         <div class="container">
-            <div class="gallery-grid" id="galleryGrid">
-                <!-- Gallery items will be populated by JavaScript -->
+            <div class="gl-hero-inner">
+                <span class="gl-eyebrow">Visual Showcase</span>
+                <h1>Our Visual <span class="gl-accent">Journey</span></h1>
+                <p>Explore the beauty of our craftsmanship through captivating visuals.</p>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="gallery-cta">
+    <!-- 2. SECTION LABEL -->
+    <section class="gl-label-section">
         <div class="container">
-            <h2>Ready to Start Your Project?</h2>
-            <p>Let us bring your vision to life with the same excellence and attention to detail</p>
-            <a href="index.html#contact" class="cta-button">Get in Touch →</a>
+            <div class="gl-section-label">
+                <span class="gl-label-text">Gallery</span>
+            </div>
         </div>
     </section>
+
+    <!-- 3. GALLERY GRID -->
+    <section class="gl-grid-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CTA -->
+    <section class="gl-cta">
+        <div class="container">
+            <div class="gl-cta-inner">
+                <h2>Ready to Start Your <span class="gl-accent">Project</span>?</h2>
+                <p>Let us bring your vision to life with the same excellence and attention to detail.</p>
+                <a href="index.html#contact" class="gl-cta-btn">Get in Touch <span>→</span></a>
+            </div>
+        </div>
+    </section>
+
 </main>
 
-<!-- Footer will be loaded here -->
 <div id="footer-placeholder"></div>
 
-<!-- Lightbox Modal -->
+<!-- Lightbox -->
 <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
     <div class="lightbox-content" onclick="event.stopPropagation()">
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
@@ -69,415 +83,530 @@
 </div>
 
 <style>
-    /* Gallery Page Styles */
-    .gallery-hero {
-        background: linear-gradient(135deg, var(--accent-light) 0%, #ffffff 100%);
-        padding: 80px 0 60px;
-        text-align: center;
-    }
+/* ============================================
+   GALLERY PAGE — Minimal Engineering
+   ============================================ */
 
-    .gallery-hero h1 {
-        font-size: 56px;
-        font-weight: 800;
-        letter-spacing: -0.02em;
-        background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 20px;
-    }
+body.gallery-page {
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(circle, rgba(31, 78, 150, 0.08) 1px, transparent 1px),
+        linear-gradient(to right, rgba(31, 78, 150, 0.022) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(31, 78, 150, 0.022) 1px, transparent 1px);
+    background-size: 24px 24px, 96px 96px, 96px 96px;
+}
 
-    .gallery-hero p {
+.gallery-page section {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* ============================================
+   1. HERO
+   ============================================ */
+.gallery-page .gl-hero {
+    padding: 120px 0 60px;
+    text-align: center;
+}
+
+.gallery-page .gl-hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery-page .gl-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(31, 78, 150, 0.15);
+}
+
+.gallery-page .gl-hero h1 {
+    font-size: 58px;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    background: linear-gradient(135deg, #0a0a0a 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0 20px;
+}
+
+.gallery-page .gl-accent {
+    background: linear-gradient(135deg, var(--primary) 0%, #3B82F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gallery-page .gl-hero p {
+    font-size: 18px;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   2. SECTION LABEL
+   ============================================ */
+.gallery-page .gl-label-section {
+    padding: 40px 0 40px;
+}
+
+.gallery-page .gl-section-label {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.gallery-page .gl-label-text {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(31, 78, 150, 0.2);
+}
+
+/* ============================================
+   3. GALLERY GRID
+   ============================================ */
+.gallery-page .gl-grid-section {
+    padding: 0 0 100px;
+}
+
+.gallery-page .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
+}
+
+.gallery-page .gallery-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.gallery-page .gallery-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(31, 78, 150, 0.3);
+}
+
+.gallery-page .gallery-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.06);
+}
+
+.gallery-page .gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-page .gallery-card:hover .gallery-image img {
+    transform: scale(1.04);
+}
+
+.gallery-page .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 42, 85, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-page .gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-page .overlay-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.gallery-page .overlay-content svg {
+    width: 18px;
+    height: 18px;
+}
+
+.gallery-page .gallery-info {
+    padding: 22px 22px 24px;
+}
+
+.gallery-page .gallery-info h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #0a0a0a;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+}
+
+.gallery-page .gallery-info p {
+    font-size: 13.5px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0 0 14px;
+}
+
+.gallery-page .gallery-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Bluish tag style */
+.gallery-page .tag {
+    background: var(--accent-light);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba(31, 78, 150, 0.12);
+}
+
+/* ============================================
+   4. CTA
+   ============================================ */
+.gallery-page .gl-cta {
+    padding: 100px 0 120px;
+    border-top: 1px solid rgba(10, 10, 10, 0.06);
+}
+
+.gallery-page .gl-cta-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery-page .gl-cta h2 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #0a0a0a;
+    margin: 0 0 16px;
+    line-height: 1.15;
+}
+
+.gallery-page .gl-cta p {
+    font-size: 17px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0 0 32px;
+}
+
+.gallery-page .gl-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease;
+}
+
+.gallery-page .gl-cta-btn:hover {
+    background: var(--primary-dark);
+    gap: 14px;
+}
+
+.gallery-page .gl-cta-btn span {
+    transition: transform 0.3s ease;
+}
+
+.gallery-page .gl-cta-btn:hover span {
+    transform: translateX(2px);
+}
+
+/* ============================================
+   LIGHTBOX
+   ============================================ */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.96);
+    z-index: 10000;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lightbox-image-container {
+    max-width: 85%;
+    max-height: 75%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+}
+
+.lightbox-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 70vh;
+}
+
+.lightbox-info {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.lightbox-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.lightbox-info p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+    z-index: 10001;
+    font-weight: 300;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10001;
+    backdrop-filter: blur(10px);
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+
+.lightbox-prev svg,
+.lightbox-next svg {
+    width: 24px;
+    height: 24px;
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 13px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-family: monospace;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .gallery-page .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery-page .gl-hero {
+        padding: 100px 0 50px;
+    }
+    .gallery-page .gl-hero h1 {
+        font-size: 42px;
+    }
+    .gallery-page .gl-hero p {
+        font-size: 16px;
+    }
+    .gallery-page .gl-cta h2 {
+        font-size: 32px;
+    }
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+    }
+    .lightbox-info h3 {
         font-size: 20px;
-        color: var(--muted);
-        max-width: 600px;
-        margin: 0 auto;
-        line-height: 1.4;
     }
-
-    .gallery-grid-section {
-        padding: 40px 0 80px;
-        background: #ffffff;
-    }
-
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 30px;
-    }
-
-    .gallery-card {
-        background: #ffffff;
-        border-radius: 24px;
-        overflow: hidden;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: pointer;
-        border: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .gallery-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 25px 40px rgba(31, 78, 150, 0.15);
-    }
-
-    .gallery-image {
-        position: relative;
-        overflow: hidden;
-        aspect-ratio: 4/3;
-    }
-
-    .gallery-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .gallery-card:hover .gallery-image img {
-        transform: scale(1.05);
-    }
-
-    /* Lighter overlay - pill button at bottom */
-    .gallery-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(to top, rgba(31, 78, 150, 0.9), rgba(31, 78, 150, 0.6), transparent);
-        padding: 30px 20px 16px;
-        display: flex;
-        justify-content: center;
-        opacity: 0;
-        transform: translateY(10px);
-        transition: all 0.3s ease;
-    }
-
-    .gallery-card:hover .gallery-overlay {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .overlay-content {
-        text-align: center;
-        color: white;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(8px);
-        padding: 8px 18px;
-        border-radius: 40px;
-    }
-
-    .overlay-content svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    .overlay-content span {
+    .lightbox-info p {
         font-size: 13px;
-        font-weight: 500;
-        letter-spacing: 0.3px;
     }
+}
 
-    .gallery-info {
+@media (max-width: 768px) {
+    .gallery-page .gallery-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .gallery-page .gl-hero h1 {
+        font-size: 32px;
+    }
+    .gallery-page .gl-cta h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-page .gl-hero {
+        padding: 80px 0 40px;
+    }
+    .gallery-page .gl-hero h1 {
+        font-size: 28px;
+    }
+    .gallery-page .gl-hero p {
+        font-size: 15px;
+    }
+    .gallery-page .gl-cta {
+        padding: 70px 0 90px;
+    }
+    .gallery-page .gl-cta h2 {
+        font-size: 24px;
+    }
+    .gallery-page .gallery-info {
         padding: 20px;
     }
-
-    .gallery-info h3 {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 8px;
-        color: var(--text-dark);
-    }
-
-    .gallery-info p {
-        font-size: 13px;
-        color: var(--muted);
-        line-height: 1.5;
-        margin-bottom: 12px;
-    }
-
-    .gallery-tags {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-    }
-
-    .tag {
-        background: var(--accent-light);
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 11px;
-        font-weight: 600;
-        color: var(--primary);
-        letter-spacing: 0.3px;
-    }
-
-    .gallery-cta {
-        background: var(--primary-dark);
-        padding: 80px 0;
-        text-align: center;
-        color: white;
-    }
-
-    .gallery-cta h2 {
-        font-size: 36px;
-        font-weight: 700;
-        margin-bottom: 16px;
-    }
-
-    .gallery-cta p {
-        font-size: 18px;
-        opacity: 0.9;
-        margin-bottom: 32px;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .cta-button {
-        background: white;
-        color: var(--primary);
-        padding: 14px 32px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 16px;
-        transition: all 0.3s ease;
-        display: inline-block;
-    }
-
-    .cta-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Lightbox Modal - Style from first code */
-    .lightbox-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.96);
-        z-index: 10000;
-        cursor: pointer;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .lightbox-modal.active {
-        display: flex;
-        opacity: 1;
-    }
-
-    .lightbox-content {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .lightbox-image-container {
-        max-width: 85%;
-        max-height: 75%;
-        overflow: hidden;
-        border-radius: 20px;
-        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
-    }
-
     .lightbox-image {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        max-height: 70vh;
+        max-width: 95%;
+        max-height: 70%;
     }
-
-    .lightbox-info {
-        margin-top: 30px;
-        text-align: center;
-        color: white;
-        max-width: 600px;
-        padding: 0 20px;
+    .lightbox-prev,
+    .lightbox-next {
+        width: 36px;
+        height: 36px;
     }
-
     .lightbox-info h3 {
-        font-size: 24px;
-        font-weight: 600;
-        margin-bottom: 8px;
+        font-size: 18px;
     }
-
     .lightbox-info p {
-        font-size: 15px;
-        color: rgba(255, 255, 255, 0.7);
-        line-height: 1.5;
+        font-size: 12px;
     }
-
-    .lightbox-close {
-        position: absolute;
-        top: 24px;
-        right: 32px;
-        font-size: 28px;
-        color: white;
-        cursor: pointer;
-        width: 44px;
-        height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1);
-        transition: all 0.2s ease;
-        z-index: 10001;
-        font-weight: 300;
+    .overlay-content span {
+        font-size: 11px;
     }
-
-    .lightbox-close:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: scale(1.05);
-    }
-
-    .lightbox-prev, .lightbox-next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 48px;
-        height: 48px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        z-index: 10001;
-        backdrop-filter: blur(10px);
-    }
-
-    .lightbox-prev:hover, .lightbox-next:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateY(-50%) scale(1.05);
-    }
-
-    .lightbox-prev { left: 24px; }
-    .lightbox-next { right: 24px; }
-
-    .lightbox-prev svg, .lightbox-next svg {
-        width: 24px;
-        height: 24px;
-        stroke: white;
-        stroke-width: 2;
-        fill: none;
-    }
-
-    .lightbox-counter {
-        position: absolute;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
-        font-size: 13px;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 6px 14px;
-        border-radius: 20px;
-        font-family: monospace;
-    }
-
-    @media (max-width: 900px) {
-        .gallery-grid {
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        }
-        .gallery-hero h1 {
-            font-size: 40px;
-        }
-        .lightbox-prev, .lightbox-next {
-            width: 40px;
-            height: 40px;
-        }
-        .lightbox-info h3 {
-            font-size: 20px;
-        }
-        .lightbox-info p {
-            font-size: 13px;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .gallery-grid {
-            grid-template-columns: 1fr;
-        }
-        .gallery-hero h1 {
-            font-size: 32px;
-        }
-        .gallery-hero p {
-            font-size: 16px;
-        }
-        .lightbox-image {
-            max-width: 95%;
-            max-height: 70%;
-        }
-        .lightbox-prev, .lightbox-next {
-            width: 36px;
-            height: 36px;
-        }
-        .lightbox-info h3 {
-            font-size: 18px;
-        }
-        .lightbox-info p {
-            font-size: 12px;
-        }
-        .overlay-content {
-            padding: 6px 14px;
-        }
-        .overlay-content span {
-            font-size: 11px;
-        }
-    }
+}
 </style>
 
-<script src="script.js"></script>
-
 <script>
-    // Gallery Data - 26 Images with Detailed Descriptions
     const galleryItems = [
-        // Chitwan Villa (4 images)
         { id: 1, image: 'Engic-Group-Project-Image/Chitwan-Villa/Chitwan Villa.png', title: 'Chitwan Villa', description: 'A luxury 3BHK home featuring smart integration and a durable, flexible structure.', category: 'Residential Exterior' },
         { id: 2, image: 'Engic-Group-Project-Image/Chitwan-Villa/Living Room Chitwan.png', title: 'Elegant Living Space', description: 'Premium Italian marble flooring, custom-designed furniture, and abundant natural light.', category: 'Residential Interior' },
         { id: 3, image: 'Engic-Group-Project-Image/Chitwan-Villa/Bed Room Chitwan.png', title: 'Master Bedroom Suite', description: 'Custom-built wardrobes, ambient lighting, and premium finishes for ultimate comfort.', category: 'Residential Interior' },
         { id: 4, image: 'Engic-Group-Project-Image/Chitwan-Villa/Bed Room and Living Room.png', title: 'Open Concept Living', description: 'The thoughtfully designed open floor plan connects living, dining, and kitchen areas, creating a spacious environment perfect for modern family life.', category: 'Residential Interior' },
-        
-        // Kathmandu Home (4 images)
+
         { id: 5, image: 'Engic-Group-Project-Image/Kathmandu-Home/Kathmandu-Home.jpg', title: 'Kathmandu Residence', description: 'An architectural statement in Baluwatar, this 4BHK home combines contemporary design with functional living spaces, creating a harmonious urban sanctuary.', category: 'Residential Exterior' },
         { id: 6, image: 'Engic-Group-Project-Image/Kathmandu-Home/Kathmandu-Home-Living-Room.png', title: 'Grand Living Area', description: 'Expansive living space with soaring ceilings, designer lighting, and carefully curated furnishings that reflect sophistication and comfort.', category: 'Residential Interior' },
         { id: 7, image: 'Engic-Group-Project-Image/Kathmandu-Home/Kathmandu-Home-Bed-Room.png', title: 'Luxury Bedroom', description: 'A serene master bedroom featuring premium hardwood flooring, smart home controls, and large windows.', category: 'Residential Interior' },
         { id: 8, image: 'Engic-Group-Project-Image/Kathmandu-Home/Kathmandu-Home-Bed-Room-and-Living-Room.png', title: 'Connected Living', description: 'Seamless transition between private and public spaces, designed for both relaxation and entertaining.', category: 'Residential Interior' },
-        
-        // Lalitpur House (5 images)
+
         { id: 9, image: 'Engic-Group-Project-Image/Lalitpur-House/Lalitpur-House.jpg', title: 'Lalitpur Modern Home', description: 'A stunning 3BHK residence in Sankhamul that exemplifies modern Nepali architecture with bold geometric forms.', category: 'Residential Exterior' },
         { id: 10, image: 'Engic-Group-Project-Image/Lalitpur-House/Lalitpur-House-Living-Room.png', title: 'Contemporary Living', description: 'The living room features custom artwork, premium furniture, and an open layout that maximizes space and natural light.', category: 'Residential Interior' },
         { id: 11, image: 'Engic-Group-Project-Image/Lalitpur-House/Lalitpur-House-Bed-Room.png', title: 'Peaceful Bedroom', description: 'Designed for rest and rejuvenation, this bedroom combines soft textiles, warm lighting, and smart storage solutions.', category: 'Residential Interior' },
         { id: 12, image: 'Engic-Group-Project-Image/Lalitpur-House/Lalitpur-House-Bath-Room-Design.png', title: 'Spa-Inspired Bathroom', description: 'A luxurious bathroom featuring premium fixtures, elegant tiles, and a rainfall shower for a spa-like experience.', category: 'Residential Interior' },
         { id: 13, image: 'Engic-Group-Project-Image/Lalitpur-House/Lalitpur-House-Design.png', title: 'Interior Harmony', description: 'Carefully curated design elements create visual harmony throughout the home, from furniture selection to decorative accents.', category: 'Residential Interior' },
-        
-        // Tanahun House (3 images)
+
         { id: 14, image: 'Engic-Group-Project-Image/Tanahun-House/Tanahun-House.png', title: 'Eco-Friendly Tanahun House', description: 'A sustainable masterpiece featuring passive solar design, natural materials, and seamless integration with the landscape.', category: 'Residential Exterior' },
         { id: 15, image: 'Engic-Group-Project-Image/Tanahun-House/Living-Room.png', title: 'Natural Living Space', description: 'The living area showcases natural stone elements, wooden accents, and large windows that connect interior spaces with nature.', category: 'Residential Interior' },
         { id: 16, image: 'Engic-Group-Project-Image/Tanahun-House/Tanahun-House-Design.png', title: 'Architectural Detail', description: 'Thoughtful architectural details throughout the home demonstrate our commitment to craftsmanship and design excellence.', category: 'Residential Exterior' },
-        
-        // Pokhara Commercial (5 images)
+
         { id: 17, image: 'Engic-Group-Project-Image/Pokhara-Commercial-Building/Pokhara-Commercial-Building.png', title: 'Pokhara Commercial Hub', description: 'A landmark commercial complex that redefines workplace environments in Pokhara with modern architecture.', category: 'Commercial Exterior' },
         { id: 18, image: 'Engic-Group-Project-Image/Pokhara-Commercial-Building/Office-Space.png', title: 'Modern Office Space', description: 'Designed for productivity and collaboration with optimal lighting, ergonomic layouts, and contemporary finishes.', category: 'Commercial Interior' },
         { id: 19, image: 'Engic-Group-Project-Image/Pokhara-Commercial-Building/Conference-Room.png', title: 'Executive Conference Room', description: 'A state-of-the-art meeting space equipped with the latest technology and designed to inspire creativity.', category: 'Commercial Interior' },
         { id: 20, image: 'Engic-Group-Project-Image/Pokhara-Commercial-Building/Lobby-Area.png', title: 'Grand Lobby', description: 'The welcoming lobby makes a powerful first impression with its double-height ceiling, premium materials, and modern aesthetic.', category: 'Commercial Interior' },
         { id: 21, image: 'Engic-Group-Project-Image/Pokhara-Commercial-Building/Roof-Garden.png', title: 'Rooftop Garden', description: 'A serene green space offering panoramic views of Pokhara, perfect for breaks and informal meetings.', category: 'Commercial Exterior' },
-        
-        // Apartment Upgrade (5 images)
+
         { id: 22, image: 'Engic-Group-Project-Image/Apartment-Upgrade/Living-Room.jpg', title: 'Modern Apartment Living', description: 'Complete interior transformation creating a bright, airy living space with premium finishes and smart storage.', category: 'Residential Interior' },
         { id: 23, image: 'Engic-Group-Project-Image/Apartment-Upgrade/Bedroom.jpg', title: 'Cozy Bedroom Design', description: 'A comfortable retreat featuring custom joinery, soft textures, and a calming color palette.', category: 'Residential Interior' },
         { id: 24, image: 'Engic-Group-Project-Image/Apartment-Upgrade/Kitchen.jpg', title: 'Modular Kitchen', description: 'A fully equipped modular kitchen with premium appliances, sleek cabinetry, and efficient workflow design.', category: 'Residential Interior' },
@@ -487,7 +616,6 @@
 
     let currentLightboxIndex = 0;
 
-    // Load header and footer
     fetch('header.html')
         .then(response => response.text())
         .then(data => {
@@ -497,12 +625,14 @@
             if (mobileToggle && navList) {
                 mobileToggle.addEventListener('click', () => {
                     navList.classList.toggle('open');
+                    mobileToggle.classList.toggle('active');
                 });
             }
             document.querySelectorAll('#navList a').forEach(link => {
                 link.addEventListener('click', () => {
                     if (window.innerWidth <= 900) {
                         navList.classList.remove('open');
+                        if (mobileToggle) mobileToggle.classList.remove('active');
                     }
                 });
             });
@@ -516,7 +646,6 @@
         })
         .catch(error => console.error('Error loading footer:', error));
 
-    // Render Gallery
     function renderGallery() {
         const grid = document.getElementById('galleryGrid');
         if (!grid) return;
@@ -546,17 +675,15 @@
         `).join('');
     }
 
-    // Lightbox Functions - Description below image (like first code)
     function openLightbox(index) {
         currentLightboxIndex = index;
         const item = galleryItems[currentLightboxIndex];
-        
         const lightbox = document.getElementById('lightbox');
         const lightboxImage = document.getElementById('lightboxImage');
         const lightboxTitle = document.getElementById('lightboxTitle');
         const lightboxDescription = document.getElementById('lightboxDescription');
         const lightboxCounter = document.getElementById('lightboxCounter');
-        
+
         lightboxImage.src = item.image;
         lightboxTitle.textContent = item.title;
         lightboxDescription.textContent = item.description;
@@ -573,19 +700,15 @@
 
     function changeImage(direction) {
         currentLightboxIndex += direction;
-        
-        if (currentLightboxIndex < 0) {
-            currentLightboxIndex = galleryItems.length - 1;
-        } else if (currentLightboxIndex >= galleryItems.length) {
-            currentLightboxIndex = 0;
-        }
-        
+        if (currentLightboxIndex < 0) currentLightboxIndex = galleryItems.length - 1;
+        else if (currentLightboxIndex >= galleryItems.length) currentLightboxIndex = 0;
+
         const item = galleryItems[currentLightboxIndex];
         const lightboxImage = document.getElementById('lightboxImage');
         const lightboxTitle = document.getElementById('lightboxTitle');
         const lightboxDescription = document.getElementById('lightboxDescription');
         const lightboxCounter = document.getElementById('lightboxCounter');
-        
+
         lightboxImage.style.opacity = '0';
         setTimeout(() => {
             lightboxImage.src = item.image;
@@ -597,21 +720,15 @@
         lightboxImage.style.transition = 'opacity 0.2s ease';
     }
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         const lightbox = document.getElementById('lightbox');
         if (lightbox.classList.contains('active')) {
-            if (e.key === 'ArrowLeft') {
-                changeImage(-1);
-            } else if (e.key === 'ArrowRight') {
-                changeImage(1);
-            } else if (e.key === 'Escape') {
-                closeLightbox();
-            }
+            if (e.key === 'ArrowLeft') changeImage(-1);
+            else if (e.key === 'ArrowRight') changeImage(1);
+            else if (e.key === 'Escape') closeLightbox();
         }
     });
 
-    // Initial render
     renderGallery();
 </script>
 

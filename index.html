@@ -9,35 +9,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page">
 
 <div id="toast-success">✅ Message Sent! We will contact you shortly.</div>
 
-<!-- Header will be loaded here -->
 <div id="header-placeholder"></div>
 
 <main>
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section id="home" class="hero">
         <div class="container hero-grid">
             <div class="hero-content-left">
                 <span class="eyebrow hero-stagger-item">Kathmandu • Nepal</span>
-                <h1 class="hero-stagger-item">Engineering Excellence. Architectural Vision. Trusted Execution.</h1>
-                <p class="lead hero-stagger-item">Engic Group is Nepal's leading civil engineering and architectural firm, specializing in delivering modern, earthquake-resistant homes, commercial spaces, and sustainable infrastructure.</p>
+                <h1 class="hero-stagger-item">
+                    <span class="hero-line-black">Built with Precision.</span><br>
+                    <span class="hero-line-blue">Designed with Purpose.</span>
+                </h1>
+                <p class="lead hero-stagger-item">Civil engineering, architecture, and construction solutions built for Nepal — from resilient homes and commercial spaces to sustainable infrastructure.</p>
                 <div class="cta-row hero-stagger-item">
-                    <a class="btn-primary" href="#projects">Our Projects</a>
-                    <a href="#contact" style="color:var(--primary);font-weight:700;padding:10px 14px;border-radius:10px;">Contact Sales →</a>
+                    <a class="btn-primary" href="#projects">Our Projects <span class="arrow">→</span></a>
+                    <a href="#contact" class="btn-ghost">Contact Sales <span class="arrow">→</span></a>
                 </div>
                 <div class="stat-row">
-                    <div class="stat stat-item">10+ Years Experience</div>
-                    <div class="stat stat-item">200+ Homes Built</div>
-                    <div class="stat stat-item">Quality Built</div>
+                    <div class="stat stat-item">4+ Years of Experience</div>
+                    <div class="stat stat-item">60+ Projects Completed</div>
+                    <div class="stat stat-item">100% Client Satisfaction</div>
                 </div>
             </div>
             <div class="hero-content-right">
                 <div class="card-surface">
-                    <h3 style="margin:0 0 8px;font-weight:700;color:var(--primary-dark)">Request a Free Project Plan</h3>
-                    <p style="margin:0 0 16px" class="muted">Tell us about your needs and we'll prepare a no-obligation feasibility and cost estimate.</p>
+                    <h3 class="hero-form-title">Request a Free Project Plan</h3>
+                    <p class="hero-form-sub">Tell us about your needs and we'll prepare a no-obligation feasibility and cost estimate.</p>
                     <form id="leadForm">
                         <input type="text" name="name" placeholder="Your full name" required class="full">
                         <input type="text" name="phone" placeholder="Phone (e.g. +977-XXXXXXXXXX)" required>
@@ -54,37 +56,40 @@
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
+            <div class="section-label fade-in">
+                <span class="section-label-text">About Engic Group</span>
+            </div>
             <div class="about-header fade-in">
-                <span class="about-eyebrow">About Engic Group</span>
-                <h2>Building Nepal's Future with <span class="highlight">Trust & Excellence</span></h2>
+                <h2>Building Nepal's Future with <span class="accent-text">Trust & Excellence</span></h2>
             </div>
             <div class="about-content fade-in">
                 <div class="about-text">
                     <p>Engic Group is a premier civil engineering and architectural firm based in Kathmandu, Nepal. We are dedicated to delivering innovative, sustainable, and high-quality construction solutions that meet the diverse needs of our clients. From residential homes to commercial complexes and large-scale infrastructure projects, our work is defined by precision, integrity, and a relentless pursuit of excellence.</p>
-                    <p>Our expertise spans across architectural design, structural engineering, 3D visualization, interior design, construction supervision, and project consulting. We specialize in earthquake-resistant structures, ensuring every building we design is safe, resilient, and built to withstand Nepal's seismic conditions. With over 10 years of industry experience and a team of passionate engineers, architects, and project managers, we have successfully delivered more than 200 projects across Nepal, making us a trusted name in the construction industry.</p>
+                    <p>Our expertise spans across architectural design, structural engineering, 3D visualization, interior design, construction supervision, and project consulting. We specialize in earthquake-resistant structures, ensuring every building we design is safe, resilient, and built to withstand Nepal's seismic conditions. With over 4 years of industry experience and a team of passionate engineers, architects, and project managers, we have successfully delivered more than 60 projects across Nepal, making us a trusted name in the construction industry.</p>
                     <div class="about-btn-container">
-                        <a href="about.html" class="view-all-btn">Learn More About Us →</a>
+                        <a href="about.html" class="link-arrow">Learn More About Us <span>→</span></a>
                     </div>
                 </div>
                 <div class="about-stats-wrapper">
                     <div class="about-stat">
                         <div class="about-stat-item">
-                            <div class="about-stat-number">10+</div>
+                            <div class="about-stat-number">4<span>+</span></div>
                             <div class="about-stat-label">Years Experience</div>
                         </div>
                         <div class="about-stat-item">
-                            <div class="about-stat-number">200+</div>
+                            <div class="about-stat-number">60
+                                <span>+</span></div>
                             <div class="about-stat-label">Projects Completed</div>
                         </div>
                         <div class="about-stat-item">
-                            <div class="about-stat-number">100%</div>
+                            <div class="about-stat-number">100<span>%</span></div>
                             <div class="about-stat-label">Client Satisfaction</div>
                         </div>
                     </div>
                     <div class="about-stat">
                         <div class="about-stat-item">
                             <div class="about-stat-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                                     <path d="M12 2L2 7l10 5 10-5-10-5z"/>
                                     <path d="M2 17l10 5 10-5"/>
                                     <path d="M2 12l10 5 10-5"/>
@@ -94,7 +99,7 @@
                         </div>
                         <div class="about-stat-item">
                             <div class="about-stat-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                                     <circle cx="12" cy="7" r="4"/>
                                 </svg>
@@ -103,7 +108,7 @@
                         </div>
                         <div class="about-stat-item">
                             <div class="about-stat-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                                     <path d="M12 2v4M4.9 4.9l2.8 2.8M2 12h4M4.9 19.1l2.8-2.8M12 22v-4M19.1 19.1l-2.8-2.8M22 12h-4M19.1 4.9l-2.8 2.8"/>
                                     <circle cx="12" cy="12" r="4"/>
                                 </svg>
@@ -119,9 +124,12 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
+            <div class="section-label fade-in">
+                <span class="section-label-text">Our Services</span>
+            </div>
             <div class="services-header fade-in">
                 <h2>Engineering Services Built With Precision</h2>
-                <p>At Engic Group, we combine innovative engineering with architectural excellence to deliver solutions that stand the test of time. Our comprehensive services are designed to transform your vision into reality with unmatched quality and attention to detail.</p>
+                <p>At Engic Group, we combine innovative engineering with architectural excellence to deliver solutions that stand the test of time.</p>
             </div>
 
             <div class="services-grid fade-in">
@@ -135,7 +143,7 @@
                             <line x1="24" y1="24" x2="38" y2="24"/>
                             <line x1="24" y1="30" x2="38" y2="30"/>
                             <line x1="24" y1="36" x2="38" y2="36"/>
-                            <circle cx="12" cy="12" r="2" fill="#0a2a55" stroke="none"/>
+                            <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
                         </svg>
                     </div>
                     <div class="service-text">
@@ -202,12 +210,12 @@
                         <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                             <rect x="8" y="6" width="32" height="36" rx="3"/>
                             <rect x="13" y="11" width="22" height="8" rx="2"/>
-                            <circle cx="16" cy="27" r="2" fill="#0a2a55" stroke="none"/>
-                            <circle cx="24" cy="27" r="2" fill="#0a2a55" stroke="none"/>
-                            <circle cx="32" cy="27" r="2" fill="#0a2a55" stroke="none"/>
-                            <circle cx="16" cy="35" r="2" fill="#0a2a55" stroke="none"/>
-                            <circle cx="24" cy="35" r="2" fill="#0a2a55" stroke="none"/>
-                            <circle cx="32" cy="35" r="2" fill="#0a2a55" stroke="none"/>
+                            <circle cx="16" cy="27" r="2" fill="currentColor" stroke="none"/>
+                            <circle cx="24" cy="27" r="2" fill="currentColor" stroke="none"/>
+                            <circle cx="32" cy="27" r="2" fill="currentColor" stroke="none"/>
+                            <circle cx="16" cy="35" r="2" fill="currentColor" stroke="none"/>
+                            <circle cx="24" cy="35" r="2" fill="currentColor" stroke="none"/>
+                            <circle cx="32" cy="35" r="2" fill="currentColor" stroke="none"/>
                         </svg>
                     </div>
                     <div class="service-text">
@@ -292,8 +300,11 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
+            <div class="section-label fade-in">
+                <span class="section-label-text">Featured Projects</span>
+            </div>
             <div class="projects-header fade-in">
-                <h2>Featured Projects</h2>
+                <h2>Selected Work</h2>
                 <p>A refined collection of structures that highlight our craftsmanship across homes and commercial spaces in the Kathmandu Valley.</p>
             </div>
             <div class="filter-buttons fade-in">
@@ -353,16 +364,19 @@
                 </div>
             </div>
             <div class="view-all-container fade-in">
-                <a href="all-projects.html" class="view-all-btn">View All Projects →</a>
+                <a href="all-projects.html" class="link-arrow">View All Projects <span>→</span></a>
             </div>
         </div>
     </section>
 
-    <!-- Blog Section - MOVED BEFORE GALLERY -->
+    <!-- Blog Section -->
     <section id="blog" class="blog-home">
         <div class="container">
+            <div class="section-label fade-in">
+                <span class="section-label-text">Latest Insights</span>
+            </div>
             <div class="blog-home-header fade-in">
-                <h2>Latest Insights</h2>
+                <h2>Insights &amp; Perspectives</h2>
                 <p>Expert articles on engineering, architecture, and sustainable design</p>
             </div>
             <div class="blog-home-grid">
@@ -384,7 +398,7 @@
                     <div class="blog-content">
                         <div class="blog-category">Architecture</div>
                         <h4>Nepal's Architectural Heritage: A Journey Through Time</h4>
-                        <p>Explore the rich architectural history of Nepal, from ancient pagodas to modern sustainable design. Discover how tradition and innovation shape Nepal's built environment.</p>
+                        <p>Explore the rich architectural history of Nepal, from ancient pagodas to modern sustainable design.</p>
                         <a href="article-nepal-architecture.html" class="read-more">Read More →</a>
                     </div>
                 </div>
@@ -395,7 +409,7 @@
                     <div class="blog-content">
                         <div class="blog-category">Sustainability</div>
                         <h4>Sustainable Construction Practices: Building Nepal's Green Future</h4>
-                        <p>Discover how sustainable construction practices are transforming Nepal's building industry, from eco-friendly materials to energy-efficient design.</p>
+                        <p>Discover how sustainable construction practices are transforming Nepal's building industry.</p>
                         <a href="article-sustainable-construction.html" class="read-more">Read More →</a>
                     </div>
                 </div>
@@ -406,7 +420,7 @@
                     <div class="blog-content">
                         <div class="blog-category">Technology</div>
                         <h4>Smart Home Integration: The Future of Living</h4>
-                        <p>How IoT and automation are transforming residential spaces in Nepal. Learn about the latest smart home technologies and how they're making homes safer and more efficient.</p>
+                        <p>How IoT and automation are transforming residential spaces in Nepal.</p>
                         <a href="article-smart-home.html" class="read-more">Read More →</a>
                     </div>
                 </div>
@@ -417,7 +431,7 @@
                     <div class="blog-content">
                         <div class="blog-category">Design</div>
                         <h4>Maximizing Small Spaces: Interior Design Tips</h4>
-                        <p>Expert advice on making the most of compact living spaces without sacrificing style. Learn clever storage solutions and design tricks that transform small spaces.</p>
+                        <p>Expert advice on making the most of compact living spaces without sacrificing style.</p>
                         <a href="article-maximizing-small-spaces.html" class="read-more">Read More →</a>
                     </div>
                 </div>
@@ -428,23 +442,26 @@
                     <div class="blog-content">
                         <div class="blog-category">Architecture</div>
                         <h4>Green Architecture: Designing for Climate Resilience</h4>
-                        <p>How architectural design can combat climate challenges in the Himalayan region. Explore passive design strategies and climate-responsive architecture.</p>
+                        <p>How architectural design can combat climate challenges in the Himalayan region.</p>
                         <a href="article-green-architecture.html" class="read-more">Read More →</a>
                     </div>
                 </div>
             </div>
             <div class="view-all-container fade-in">
-                <a href="blog.html" class="view-all-btn">View All Articles →</a>
+                <a href="blog.html" class="link-arrow">View All Articles <span>→</span></a>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section - MOVED AFTER BLOG -->
+    <!-- Gallery Section -->
     <section id="gallery" class="gallery-home">
         <div class="container">
+            <div class="section-label fade-in">
+                <span class="section-label-text">Project Gallery</span>
+            </div>
             <div class="gallery-home-header fade-in">
-                <h2>Project Gallery</h2>
-                <p>A visual showcase of our finest engineering and architectural works</p>
+                <h2>A Visual Showcase</h2>
+                <p>A curated collection of our finest engineering and architectural works</p>
             </div>
             <div class="gallery-home-grid">
                 <div class="gallery-home-card fade-in" style="--delay: 1">
@@ -527,16 +544,19 @@
                 </div>
             </div>
             <div class="view-all-container fade-in">
-                <a href="gallery.html" class="view-all-btn">View Full Gallery →</a>
+                <a href="gallery.html" class="link-arrow">View Full Gallery <span>→</span></a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="container" style="padding:80px 0;">
+    <section id="contact" class="container contact-wrap">
+        <div class="section-label fade-in">
+            <span class="section-label-text">Get in Touch</span>
+        </div>
         <div class="contact scale-in">
-            <h2 style="margin:0 0 8px;color:var(--primary-dark);font-size:32px">Detailed Inquiry Form</h2>
-            <p class="muted" style="margin:0 0 24px;font-size:16px">Use this form for detailed project submissions. We commit to a personalized response within two business days.</p>
+            <h2>Detailed Inquiry Form</h2>
+            <p class="muted">Use this form for detailed project submissions. We commit to a personalized response within two business days.</p>
             <form id="contactForm">
                 <input type="text" name="name" placeholder="Full Name" required>
                 <input type="text" name="phone" placeholder="Phone Number" required>
@@ -550,587 +570,1054 @@
     </section>
 </main>
 
-<!-- Footer will be loaded here -->
 <div id="footer-placeholder"></div>
 
 <style>
-    /* About Section Styles */
-    .about-section {
-        padding: 100px 0;
-        background: #ffffff;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-    }
+/* ============================================
+   HOMEPAGE — Minimal Engineering
+   ============================================ */
 
-    .about-header {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 50px;
-    }
+body.home-page {
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(circle, rgba(31, 78, 150, 0.08) 1px, transparent 1px),
+        linear-gradient(to right, rgba(31, 78, 150, 0.022) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(31, 78, 150, 0.022) 1px, transparent 1px);
+    background-size: 24px 24px, 96px 96px, 96px 96px;
+}
 
-    .about-eyebrow {
-        display: inline-block;
-        background: rgba(31, 78, 150, 0.1);
-        color: var(--primary);
-        padding: 6px 14px;
-        border-radius: 999px;
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        margin-bottom: 16px;
-    }
+/* --- Section label --- */
+.home-page .section-label {
+    margin-bottom: 32px;
+}
 
-    .about-header h2 {
-        font-size: 42px;
-        font-weight: 800;
-        margin: 0;
-        color: var(--text-dark);
-        letter-spacing: -0.02em;
-        line-height: 1.2;
-    }
+.home-page .section-label-text {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(31, 78, 150, 0.2);
+}
 
-    .about-header h2 .highlight {
-        background: linear-gradient(135deg, var(--primary) 0%, #3B82F6 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
+/* --- Link with arrow --- */
+.home-page .link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+    transition: all 0.3s ease;
+}
 
-    .about-content {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        gap: 60px;
-        align-items: center;
-    }
+.home-page .link-arrow:hover {
+    gap: 12px;
+    border-bottom-color: var(--primary);
+    color: var(--primary);
+}
 
-    .about-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
-    }
+.home-page .link-arrow span {
+    transition: transform 0.3s ease;
+}
 
-    .about-text p {
-        font-size: 17px;
-        color: var(--muted);
-        line-height: 1.8;
-        margin-bottom: 16px;
-    }
+.home-page .link-arrow:hover span {
+    transform: translateX(2px);
+}
 
-    .about-text p:last-of-type {
-        margin-bottom: 0;
-    }
+/* ============================================
+   HERO
+   ============================================ */
+.home-page .hero {
+    padding: 120px 0 90px;
+    background: transparent;
+    border-bottom: none;
+    position: relative;
+}
 
-    .about-btn-container {
-        text-align: center;
-        margin-top: 32px;
-        padding-top: 16px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.home-page .hero::before {
+    display: none;
+}
 
-    .about-btn-container .view-all-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: transparent;
-        color: var(--primary);
-        padding: 12px 28px;
-        border-radius: 40px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 16px;
-        border: 2px solid var(--primary);
-        transition: all 0.3s ease;
-    }
+.home-page .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    gap: 72px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
 
-    .about-btn-container .view-all-btn:hover {
-        background: var(--primary);
-        color: #fff;
-        gap: 15px;
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(31, 78, 150, 0.3);
-    }
+.home-page .hero-content-left .eyebrow {
+    display: inline-block;
+    background: transparent;
+    color: #6b7280;
+    padding: 0 0 10px;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(31, 78, 150, 0.2);
+    margin-bottom: 28px;
+}
 
-    .about-stats-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+.home-page .hero-content-left h1 {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    color: #0a0a0a;
+    margin: 0 0 28px;
+}
 
-    .about-stat {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        background: var(--accent-light);
-        padding: 28px 24px;
-        border-radius: 20px;
-        border: 1px solid rgba(31, 78, 150, 0.06);
-        box-shadow: 0 4px 20px rgba(31, 78, 150, 0.06);
-        align-self: center;
-        width: 100%;
-    }
+.home-page .hero-line-black {
+    color: #0a0a0a;
+}
 
-    .about-stat-item {
-        text-align: center;
-    }
+.home-page .hero-line-blue {
+    color: var(--primary);
+}
 
-    .about-stat-number {
-        font-size: 32px;
-        font-weight: 800;
-        color: var(--primary);
-        line-height: 1.2;
-        margin-bottom: 4px;
-    }
+.home-page .hero-content-left .lead {
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 0 0 36px;
+    max-width: 560px;
+}
 
-    .about-stat-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 8px;
-    }
+.home-page .cta-row {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
 
-    .about-stat-icon svg {
-        stroke: var(--primary);
-        width: 32px;
-        height: 32px;
-    }
+.home-page .btn-primary {
+    background: var(--primary);
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.2px;
+}
 
-    .about-stat-label {
-        font-size: 13px;
-        color: var(--muted);
-        font-weight: 500;
-    }
+.home-page .btn-primary:hover {
+    background: var(--primary-dark);
+    gap: 12px;
+}
 
-    /* Blog Home Section */
-    .blog-home {
-        padding: 80px 0;
-        background: #ffffff;
-    }
+.home-page .btn-primary .arrow {
+    transition: transform 0.3s ease;
+}
 
-    .blog-home-header {
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto 60px;
-    }
+.home-page .btn-ghost {
+    color: #0a0a0a;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 14px 4px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+    transition: all 0.3s ease;
+}
 
-    .blog-home-header h2 {
-        font-size: 42px;
-        margin: 0 0 16px;
-        font-weight: 800;
-        background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
+.home-page .btn-ghost:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+    gap: 10px;
+}
 
-    .blog-home-header p {
-        color: var(--muted);
-        font-size: 18px;
-        line-height: 1.6;
-        margin: 0;
-    }
+.home-page .stat-row {
+    display: flex;
+    gap: 32px;
+    margin-top: 0;
+    padding: 24px 0 0;
+    border-top: 1px solid rgba(10, 10, 10, 0.08);
+    flex-wrap: wrap;
+}
 
-    .blog-home-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-    }
+.home-page .stat {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
 
-    .blog-card {
-        background: #fff;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid rgba(0, 0, 0, 0.05);
-    }
+/* Hero Form Card */
+.home-page .hero-content-right .card-surface {
+    background: #ffffff;
+    border: 1px solid rgba(31, 78, 150, 0.12);
+    border-radius: 12px;
+    padding: 40px 36px;
+    box-shadow: none;
+    transition: none;
+}
 
-    .blog-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 25px 40px rgba(31, 78, 150, 0.12);
-    }
+.home-page .card-surface:hover {
+    transform: none;
+    box-shadow: none;
+}
 
-    .blog-image {
-        height: 200px;
-        overflow: hidden;
-    }
+.home-page .hero-form-title {
+    margin: 0 0 8px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: #0a0a0a;
+}
 
-    .blog-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
+.home-page .hero-form-sub {
+    margin: 0 0 24px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.55;
+}
 
-    .blog-card:hover .blog-image img {
-        transform: scale(1.05);
-    }
+.home-page #leadForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
 
-    .blog-content {
-        padding: 24px;
-    }
+.home-page #leadForm .full {
+    grid-column: 1 / -1;
+}
 
-    .blog-category {
-        display: inline-block;
-        background: var(--accent-light);
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 11px;
-        font-weight: 600;
-        color: var(--primary);
-        margin-bottom: 12px;
-    }
+.home-page input,
+.home-page textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+    background: #ffffff;
+    color: #0a0a0a;
+}
 
-    .blog-content h4 {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 12px;
-        color: var(--text-dark);
-        line-height: 1.4;
-    }
+.home-page input:focus,
+.home-page textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(31, 78, 150, 0.08);
+}
 
-    .blog-content p {
-        font-size: 14px;
-        color: var(--muted);
-        margin-bottom: 16px;
-        line-height: 1.5;
-    }
+.home-page button[type=submit] {
+    background: var(--primary);
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    width: 100%;
+    letter-spacing: 0.2px;
+}
 
-    .read-more {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: var(--primary);
-        font-weight: 600;
-        font-size: 14px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
+.home-page button[type=submit]:hover {
+    background: var(--primary-dark);
+    transform: none;
+    box-shadow: none;
+}
 
-    .read-more:hover {
-        gap: 12px;
-    }
+/* ============================================
+   ABOUT
+   ============================================ */
+.home-page .about-section {
+    padding: 100px 0;
+    background: transparent;
+    border: none;
+}
 
-    /* Gallery Home Section */
-    .gallery-home {
-        padding: 80px 0;
-        background: #ffffff;
-    }
+.home-page .about-header {
+    max-width: 720px;
+    margin: 0 0 56px;
+    text-align: left;
+}
 
-    .gallery-home-header {
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto 60px;
-    }
+.home-page .about-header h2 {
+    font-size: 44px;
+    font-weight: 800;
+    margin: 0;
+    color: #0a0a0a;
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+}
 
-    .gallery-home-header h2 {
-        font-size: 42px;
-        margin: 0 0 16px;
-        font-weight: 800;
-        background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
+.home-page .accent-text {
+    color: var(--primary);
+}
 
-    .gallery-home-header p {
-        color: var(--muted);
-        font-size: 18px;
-        line-height: 1.6;
-        margin: 0;
-    }
+.home-page .about-content {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
 
-    .gallery-home-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-    }
+.home-page .about-text p {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
 
-    .gallery-home-card {
-        background: #fff;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: pointer;
-    }
+.home-page .about-text p:last-of-type {
+    margin-bottom: 0;
+}
 
-    .gallery-home-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 25px 40px rgba(31, 78, 150, 0.12);
-    }
+.home-page .about-btn-container {
+    margin-top: 32px;
+    padding: 0;
+    display: block;
+    text-align: center;
+}
 
-    .gallery-home-image {
-        position: relative;
-        height: 250px;
-        overflow: hidden;
-    }
+.home-page .about-stats-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: sticky;
+    top: 100px;
+}
 
-    .gallery-home-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
+.home-page .about-stat {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    background: #ffffff;
+    padding: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(31, 78, 150, 0.12);
+    box-shadow: none;
+    width: 100%;
+    overflow: hidden;
+}
 
-    .gallery-home-card:hover .gallery-home-image img {
-        transform: scale(1.05);
-    }
+.home-page .about-stat-item {
+    text-align: left;
+    padding: 24px 20px;
+}
 
-    .gallery-home-info {
-        padding: 20px;
-    }
+.home-page .about-stat-item + .about-stat-item {
+    border-left: 1px solid rgba(31, 78, 150, 0.1);
+}
 
-    .gallery-home-info h4 {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 8px;
-        color: var(--text-dark);
-    }
+.home-page .about-stat-number {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0a0a0a;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+    font-variant-numeric: tabular-nums;
+}
 
-    .gallery-home-info p {
-        font-size: 13px;
-        color: var(--muted);
-        margin-bottom: 10px;
-        line-height: 1.4;
-    }
+.home-page .about-stat-number span {
+    color: var(--primary);
+}
 
-    .gallery-tags {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-    }
+.home-page .about-stat-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
 
-    .tag {
-        background: var(--accent-light);
-        padding: 4px 10px;
-        border-radius: 14px;
-        font-size: 10px;
-        font-weight: 600;
-        color: var(--primary);
-        letter-spacing: 0.3px;
-    }
+.home-page .about-stat-icon svg {
+    stroke: currentColor;
+    width: 24px;
+    height: 24px;
+}
 
-    /* Contact Section */
-    .contact {
-        padding: 50px 44px;
-        background: var(--accent-light);
-        border-radius: 20px;
-        margin-bottom: 40px;
-    }
+.home-page .about-stat-label {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+    line-height: 1.4;
+}
 
-    .contact h2 {
-        font-size: 32px;
-        color: var(--primary-dark);
-        margin-bottom: 8px;
-    }
+/* ============================================
+   SERVICES
+   ============================================ */
+.home-page .services {
+    padding: 100px 0;
+    background: transparent;
+}
 
-    form {
-        display: grid;
+.home-page .services-header {
+    text-align: left;
+    max-width: 720px;
+    margin: 0 0 56px;
+}
+
+.home-page .services-header h2 {
+    font-size: 44px;
+    margin: 0 0 16px;
+    font-weight: 800;
+    color: #0a0a0a;
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+}
+
+.home-page .services-header p {
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.home-page .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(31, 78, 150, 0.12);
+    border-left: 1px solid rgba(31, 78, 150, 0.12);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.home-page .service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 36px 32px;
+    border-right: 1px solid rgba(31, 78, 150, 0.12);
+    border-bottom: 1px solid rgba(31, 78, 150, 0.12);
+    transition: background 0.25s ease;
+    background: #ffffff;
+}
+
+.home-page .service-item:hover {
+    background: rgba(31, 78, 150, 0.02);
+    box-shadow: none;
+}
+
+.home-page .service-icon-wrap {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.home-page .service-icon-wrap svg {
+    width: 34px;
+    height: 34px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.25s ease;
+}
+
+.home-page .service-text h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0a0a0a;
+    margin: 0 0 10px;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+}
+
+.home-page .service-text p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ============================================
+   PROJECTS
+   ============================================ */
+.home-page .projects {
+    padding: 100px 0;
+    background: transparent;
+}
+
+.home-page .projects-header {
+    text-align: left;
+    max-width: 720px;
+    margin: 0 0 32px;
+}
+
+.home-page .projects-header h2 {
+    font-size: 44px;
+    margin: 0 0 16px;
+    font-weight: 800;
+    color: #0a0a0a;
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+    background: none;
+    -webkit-text-fill-color: initial;
+}
+
+.home-page .projects-header p {
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================
+   FILTER BUTTONS — FORCED CENTER
+   ============================================ */
+.home-page .filter-buttons {
+    display: flex !important;
+    gap: 12px !important;
+    margin: 0 0 40px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-bottom: 24px !important;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.08) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    float: none !important;
+}
+
+.home-page .filter-btn {
+    padding: 10px 22px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border: 2px solid var(--primary) !important;
+    background: var(--accent-light) !important;
+    color: var(--primary) !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    font-family: inherit !important;
+    letter-spacing: 0.2px !important;
+}
+
+.home-page .filter-btn:hover {
+    background: var(--primary) !important;
+    color: #ffffff !important;
+    border-color: var(--primary-dark) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(31, 78, 150, 0.2) !important;
+}
+
+.home-page .filter-btn.active {
+    background: var(--primary) !important;
+    color: #ffffff !important;
+    border-color: var(--primary-dark) !important;
+    box-shadow: 0 6px 16px rgba(31, 78, 150, 0.25) !important;
+}
+
+.home-page .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
+}
+
+.home-page .project-card {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+    border: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.home-page .project-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(31, 78, 150, 0.3);
+}
+
+.home-page .project-thumb {
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.06);
+}
+
+.home-page .project-thumb::after {
+    display: none;
+}
+
+.home-page .project-content {
+    padding: 24px;
+}
+
+.home-page .project-content h4 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #0a0a0a;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+}
+
+.home-page .project-content p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 16px;
+}
+
+.home-page .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+    letter-spacing: 0.2px;
+}
+
+.home-page .project-link:hover {
+    gap: 10px;
+}
+
+/* ============================================
+   BLOG
+   ============================================ */
+.home-page .blog-home {
+    padding: 100px 0;
+    background: transparent;
+}
+
+.home-page .blog-home-header {
+    text-align: left;
+    max-width: 720px;
+    margin: 0 0 56px;
+}
+
+.home-page .blog-home-header h2 {
+    font-size: 44px;
+    margin: 0 0 16px;
+    font-weight: 800;
+    color: #0a0a0a;
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+    background: none;
+    -webkit-text-fill-color: initial;
+}
+
+.home-page .blog-home-header p {
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.home-page .blog-home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.home-page .blog-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+    border: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.home-page .blog-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(31, 78, 150, 0.3);
+}
+
+.home-page .blog-image {
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.06);
+}
+
+.home-page .blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.home-page .blog-card:hover .blog-image img {
+    transform: scale(1.04);
+}
+
+.home-page .blog-content {
+    padding: 24px;
+}
+
+.home-page .blog-category {
+    display: inline-block;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.home-page .blog-content h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: #0a0a0a;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.home-page .blog-content p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0 0 16px;
+    line-height: 1.6;
+}
+
+.home-page .read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+    letter-spacing: 0.2px;
+}
+
+.home-page .read-more:hover {
+    gap: 10px;
+}
+
+/* ============================================
+   GALLERY
+   ============================================ */
+.home-page .gallery-home {
+    padding: 100px 0;
+    background: transparent;
+}
+
+.home-page .gallery-home-header {
+    text-align: left;
+    max-width: 720px;
+    margin: 0 0 56px;
+}
+
+.home-page .gallery-home-header h2 {
+    font-size: 44px;
+    margin: 0 0 16px;
+    font-weight: 800;
+    color: #0a0a0a;
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+    background: none;
+    -webkit-text-fill-color: initial;
+}
+
+.home-page .gallery-home-header p {
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.home-page .gallery-home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.home-page .gallery-home-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.home-page .gallery-home-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(31, 78, 150, 0.3);
+}
+
+.home-page .gallery-home-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.06);
+}
+
+.home-page .gallery-home-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.home-page .gallery-home-card:hover .gallery-home-image img {
+    transform: scale(1.04);
+}
+
+.home-page .gallery-home-info {
+    padding: 22px;
+}
+
+.home-page .gallery-home-info h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #0a0a0a;
+    letter-spacing: -0.01em;
+}
+
+.home-page .gallery-home-info p {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0 0 14px;
+    line-height: 1.55;
+}
+
+.home-page .gallery-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.home-page .tag {
+    background: var(--accent-light);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba(31, 78, 150, 0.12);
+}
+
+/* ============================================
+   CONTACT
+   ============================================ */
+.home-page .contact-wrap {
+    padding: 100px 24px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.home-page .contact {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.home-page .contact h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #0a0a0a;
+    letter-spacing: -0.03em;
+    margin: 0 0 12px;
+    line-height: 1.15;
+}
+
+.home-page .contact .muted {
+    color: #6b7280;
+    font-size: 16px;
+    margin: 0 0 40px;
+    max-width: 620px;
+    line-height: 1.6;
+}
+
+.home-page .contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid rgba(31, 78, 150, 0.12);
+    border-radius: 12px;
+}
+
+.home-page .contact form .full {
+    grid-column: 1 / -1;
+}
+
+/* ============================================
+   VIEW ALL / LINK CONTAINERS
+   ============================================ */
+.home-page .view-all-container {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+/* ============================================
+   TOAST
+   ============================================ */
+#toast-success {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    padding: 14px 28px;
+    background: #10B981;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.4s ease;
+    font-size: 15px;
+}
+
+#toast-success.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .home-page .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    .home-page .hero-content-left h1 {
+        font-size: 44px;
+    }
+    .home-page .about-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    .home-page .about-stats-wrapper {
+        position: static;
+    }
+    .home-page .services-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .home-page .blog-home-grid,
+    .home-page .gallery-home-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .home-page .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .home-page .hero {
+        padding: 80px 0 60px;
+    }
+    .home-page .hero-content-left h1 {
+        font-size: 36px;
+    }
+    .home-page .hero-content-left .lead {
+        font-size: 16px;
+    }
+    .home-page .about-section,
+    .home-page .services,
+    .home-page .projects,
+    .home-page .blog-home,
+    .home-page .gallery-home,
+    .home-page .contact-wrap {
+        padding: 70px 0;
+    }
+    .home-page .about-header h2,
+    .home-page .services-header h2,
+    .home-page .projects-header h2,
+    .home-page .blog-home-header h2,
+    .home-page .gallery-home-header h2,
+    .home-page .contact h2 {
+        font-size: 32px;
+    }
+    .home-page .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .home-page .blog-home-grid,
+    .home-page .gallery-home-grid {
+        grid-template-columns: 1fr;
+    }
+    .home-page .contact form {
+        grid-template-columns: 1fr;
+        padding: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-page .hero-content-left h1 {
+        font-size: 30px;
+    }
+    .home-page .hero-grid {
+        gap: 40px;
+    }
+    .home-page .card-surface {
+        padding: 32px 24px;
+    }
+    .home-page .about-stat {
+        grid-template-columns: 1fr;
+    }
+    .home-page .about-stat-item + .about-stat-item {
+        border-left: none;
+        border-top: 1px solid rgba(31, 78, 150, 0.1);
+    }
+    .home-page .stat-row {
         gap: 16px;
     }
-
-    form .full {
-        grid-column: 1 / -1;
+    .home-page .filter-buttons {
+        gap: 8px !important;
     }
-
-    input, textarea {
-        width: 100%;
-        padding: 12px 14px;
-        border-radius: 10px;
-        border: 1.5px solid #e5e7eb;
-        font-size: 15px;
-        outline: none;
-        transition: all 0.3s ease;
-        font-family: inherit;
-        background: #fff;
+    .home-page .filter-btn {
+        padding: 8px 16px !important;
+        font-size: 12px !important;
     }
-
-    textarea {
-        resize: vertical;
-        min-height: 80px;
+    .home-page .section-label {
+        margin-bottom: 24px;
     }
-
-    input:focus, textarea:focus {
-        border-color: var(--primary);
-        box-shadow: 0 0 0 4px rgba(31, 78, 150, 0.1);
+    .home-page .section-label-text {
+        font-size: 11px;
+        letter-spacing: 1.8px;
     }
-
-    button[type=submit] {
-        background: var(--primary);
-        color: #fff;
-        padding: 14px 24px;
-        border-radius: 10px;
-        border: 0;
-        font-weight: 700;
-        font-size: 16px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-family: inherit;
-        width: 100%;
-    }
-
-    button[type=submit]:hover {
-        background: var(--primary-dark);
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(31, 78, 150, 0.3);
-    }
-
-    .muted {
-        color: var(--muted);
-        font-size: 15px;
-    }
-
-    /* View All Button */
-    .view-all-container {
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    .view-all-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: transparent;
-        color: var(--primary);
-        padding: 12px 28px;
-        border-radius: 40px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 16px;
-        border: 2px solid var(--primary);
-        transition: all 0.3s ease;
-    }
-
-    .view-all-btn:hover {
-        background: var(--primary);
-        color: #fff;
-        gap: 15px;
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(31, 78, 150, 0.3);
-    }
-
-    /* Toast Notification */
-    #toast-success {
-        position: fixed;
-        top: 24px;
-        left: 50%;
-        transform: translateX(-50%) translateY(-20px);
-        padding: 14px 28px;
-        background: #10B981;
-        color: #fff;
-        font-weight: 600;
-        border-radius: 10px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        opacity: 0;
-        pointer-events: none;
-        z-index: 9999;
-        transition: all 0.4s ease;
-        font-size: 15px;
-    }
-
-    #toast-success.show {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-
-    @media (max-width: 1024px) {
-        .about-content {
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-        .about-stats-wrapper {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .about-stat {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-    }
-
-    @media (max-width: 900px) {
-        .blog-home-grid,
-        .gallery-home-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .about-section {
-            padding: 60px 0;
-        }
-        .about-header h2 {
-            font-size: 30px;
-        }
-        .about-text p {
-            font-size: 15px;
-        }
-        .about-stat {
-            grid-template-columns: repeat(3, 1fr);
-            padding: 20px 16px;
-            gap: 12px;
-            border-radius: 16px;
-        }
-        .about-stat-number {
-            font-size: 24px;
-        }
-        .about-stat-label {
-            font-size: 11px;
-        }
-        .about-stat-icon svg {
-            width: 26px;
-            height: 26px;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .about-stat {
-            grid-template-columns: 1fr;
-            gap: 16px;
-            border-radius: 16px;
-            padding: 20px;
-        }
-        .about-header h2 {
-            font-size: 26px;
-        }
-        .about-text p {
-            font-size: 14px;
-        }
-        .blog-home-grid,
-        .gallery-home-grid {
-            grid-template-columns: 1fr;
-        }
-        .blog-home-header h2,
-        .gallery-home-header h2 {
-            font-size: 32px;
-        }
-        .contact {
-            padding: 30px 20px;
-        }
-        form {
-            grid-template-columns: 1fr;
-        }
-        .about-section {
-            padding: 40px 0;
-        }
-        .about-btn-container .view-all-btn {
-            padding: 10px 20px;
-            font-size: 14px;
-        }
-        .about-stats-wrapper {
-            flex-direction: column;
-            align-items: center;
-        }
-        .about-stat {
-            max-width: 100%;
-        }
-    }
+}
 </style>
 
 <script>
@@ -1245,7 +1732,7 @@
         });
     });
 
-    // Smooth scroll for anchor links
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -1277,7 +1764,7 @@
         });
     });
 
-    // Intersection Observer for animations
+    // Intersection Observer
     const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -1296,7 +1783,7 @@
         observer.observe(el);
     });
 
-    // Sticky header on scroll
+    // Sticky header
     window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
         if (header) {
@@ -1308,7 +1795,7 @@
         }
     });
 
-    // Initial hero animations on page load
+    // Initial hero animations
     window.addEventListener('DOMContentLoaded', () => {
         const heroLeft = document.querySelector('.hero-content-left');
         const heroRight = document.querySelector('.hero-content-right');
@@ -1424,9 +1911,7 @@
                 });
             });
         })
-        .catch(error => {
-            console.error('Error loading header:', error);
-        });
+        .catch(error => console.error('Error loading header:', error));
 
     // Load footer
     fetch('footer.html')
@@ -1437,9 +1922,7 @@
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
         })
-        .catch(error => {
-            console.error('Error loading footer:', error);
-        });
+        .catch(error => console.error('Error loading footer:', error));
 </script>
 
 </body>

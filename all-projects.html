@@ -8,380 +8,28 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* All Projects Page Styles */
-        
-        /* Hero Section */
-        .all-projects-hero {
-            background: linear-gradient(135deg, var(--accent-light) 0%, #ffffff 100%);
-            padding: 80px 0 60px;
-            text-align: center;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-        }
-
-        .all-projects-hero .eyebrow {
-            display: inline-block;
-            background: rgba(31, 78, 150, 0.1);
-            color: var(--primary);
-            padding: 6px 16px;
-            border-radius: 999px;
-            font-weight: 700;
-            font-size: 12px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-
-        .all-projects-hero h1 {
-            font-size: 48px;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
-
-        .all-projects-hero p {
-            font-size: 18px;
-            color: var(--muted);
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* Filter Buttons - Same as index.html */
-        .all-projects-filters {
-            padding: 30px 0 40px;
-            background: #ffffff;
-        }
-
-        .filter-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .filter-btn {
-            padding: 10px 24px;
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: 600;
-            border: 2px solid var(--primary);
-            background: var(--accent-light);
-            color: var(--primary);
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            font-family: inherit;
-        }
-
-        .filter-btn:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        .filter-btn.active {
-            background: var(--primary);
-            color: #ffffff;
-            border-color: var(--primary-dark);
-        }
-
-        /* Projects Grid */
-        .all-projects-grid {
-            padding: 0 0 60px;
-            background: #ffffff;
-        }
-
-        .projects-grid-full {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 32px;
-        }
-
-        .project-card {
-            border-radius: 20px;
-            overflow: hidden;
-            background: #fff;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(0, 0, 0, 0.03);
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .project-thumb {
-            height: 240px;
-            background-position: center;
-            background-size: cover;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-thumb::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60%;
-            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .project-card:hover .project-thumb::after {
-            opacity: 1;
-        }
-
-        .project-content {
-            padding: 24px;
-        }
-
-        .project-content h4 {
-            font-size: 20px;
-            margin: 0 0 8px;
-            color: var(--text-dark);
-            font-weight: 700;
-        }
-
-        .project-content p {
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.6;
-            margin: 0 0 16px;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 14px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .project-link:hover {
-            gap: 12px;
-        }
-
-        /* Professional Projects Footer Section - Bluish Background */
-        .projects-footer-section {
-            background: linear-gradient(135deg, var(--accent-light) 0%, #ffffff 100%);
-            padding: 60px 0 80px;
-            border-top: 1px solid rgba(0, 0, 0, 0.04);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-        }
-
-        .projects-footer-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .projects-footer-stats {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-            padding: 20px 0;
-            border-top: 1px solid rgba(31, 78, 150, 0.08);
-            border-bottom: 1px solid rgba(31, 78, 150, 0.08);
-        }
-
-        .stat-item {
-            flex: 1;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 42px;
-            font-weight: 800;
-            color: var(--primary);
-            line-height: 1.2;
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: var(--muted);
-            font-weight: 500;
-            letter-spacing: 0.3px;
-        }
-
-        .projects-footer-message h3 {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-
-        .projects-footer-message p {
-            font-size: 16px;
-            color: var(--muted);
-            line-height: 1.7;
-            max-width: 600px;
-            margin: 0 auto 24px;
-        }
-
-        .footer-quote {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
-            background: rgba(31, 78, 150, 0.06);
-            padding: 18px 32px;
-            border-radius: 16px;
-            margin: 20px auto 30px;
-            max-width: 520px;
-            border: 1px solid rgba(31, 78, 150, 0.05);
-        }
-
-        .footer-quote svg {
-            flex-shrink: 0;
-            stroke: var(--primary);
-            width: 28px;
-            height: 28px;
-        }
-
-        .footer-quote p {
-            margin: 0;
-            font-size: 15px;
-            font-style: italic;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
-
-        .projects-cta-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--primary);
-            color: white;
-            padding: 14px 32px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-
-        .projects-cta-btn:hover {
-            background: var(--primary-dark);
-            gap: 15px;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(31, 78, 150, 0.3);
-        }
-
-        @media (max-width: 1024px) {
-            .projects-grid-full {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 900px) {
-            .all-projects-hero h1 {
-                font-size: 36px;
-            }
-            .projects-footer-stats {
-                gap: 20px;
-            }
-            .stat-number {
-                font-size: 32px;
-            }
-            .projects-footer-message h3 {
-                font-size: 24px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .projects-grid-full {
-                grid-template-columns: 1fr;
-                max-width: 500px;
-                margin: 0 auto;
-            }
-            .all-projects-hero {
-                padding: 60px 0 40px;
-            }
-            .all-projects-hero h1 {
-                font-size: 30px;
-            }
-            .all-projects-hero p {
-                font-size: 16px;
-            }
-            .filter-btn {
-                padding: 8px 18px;
-                font-size: 13px;
-            }
-            .filter-buttons {
-                gap: 8px;
-            }
-            .projects-footer-stats {
-                flex-direction: column;
-                gap: 20px;
-            }
-            .stat-number {
-                font-size: 28px;
-            }
-            .footer-quote {
-                flex-direction: column;
-                text-align: center;
-                padding: 16px 20px;
-            }
-            .projects-footer-message h3 {
-                font-size: 22px;
-            }
-            .projects-footer-message p {
-                font-size: 15px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .filter-btn {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-            .projects-footer-section {
-                padding: 40px 0 60px;
-            }
-        }
-    </style>
 </head>
-<body>
+<body class="projects-page">
 
 <div id="toast-success">✅ Message Sent! We will contact you shortly.</div>
 
-<!-- Header will be loaded here -->
 <div id="header-placeholder"></div>
 
 <main>
-    <!-- Hero Section - Bluish Background -->
-    <section class="all-projects-hero">
+
+    <!-- 1. HERO -->
+    <section class="ap-hero">
         <div class="container">
-            <span class="eyebrow">Our Portfolio</span>
-            <h1>Every Project Tells a Story</h1>
-            <p>Explore our diverse portfolio of residential, commercial, and renovation projects across Nepal. Each project reflects our commitment to quality, innovation, and sustainability.</p>
+            <div class="ap-hero-inner">
+                <span class="ap-eyebrow">Our Portfolio</span>
+                <h1>Every Project Tells a <span class="ap-accent">Story</span></h1>
+                <p>Explore our diverse portfolio of residential, commercial, and renovation projects across Nepal. Each project reflects our commitment to quality, innovation, and sustainability.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Filter Buttons - Same style as index.html -->
-    <section class="all-projects-filters">
+    <!-- 2. FILTERS -->
+    <section class="ap-filters">
         <div class="container">
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
@@ -392,11 +40,11 @@
         </div>
     </section>
 
-    <!-- Projects Grid - 12 Projects -->
-    <section class="all-projects-grid">
+    <!-- 3. PROJECTS GRID -->
+    <section class="ap-grid-section">
         <div class="container">
             <div class="projects-grid-full" id="allProjectsGrid">
-                <!-- Project 1 - Chitwan Villa -->
+
                 <div class="project-card" data-type="residential">
                     <div class="project-thumb" style="background-image: url('Engic-Group-Project-Image/Chitwan-Villa/Chitwan Villa.png');"></div>
                     <div class="project-content">
@@ -406,7 +54,6 @@
                     </div>
                 </div>
 
-                <!-- Project 2 - Kathmandu Residential Home -->
                 <div class="project-card" data-type="residential">
                     <div class="project-thumb" style="background-image: url('Engic-Group-Project-Image/Kathmandu-Home/Kathmandu-Home.jpg');"></div>
                     <div class="project-content">
@@ -416,7 +63,6 @@
                     </div>
                 </div>
 
-                <!-- Project 3 - Lalitpur House -->
                 <div class="project-card" data-type="residential">
                     <div class="project-thumb" style="background-image: url('Engic-Group-Project-Image/Lalitpur-House/Lalitpur-House.jpg');"></div>
                     <div class="project-content">
@@ -426,7 +72,6 @@
                     </div>
                 </div>
 
-                <!-- Project 4 - Tanahun House -->
                 <div class="project-card" data-type="residential">
                     <div class="project-thumb" style="background-image: url('Engic-Group-Project-Image/Tanahun-House/Tanahun-House.png');"></div>
                     <div class="project-content">
@@ -436,7 +81,6 @@
                     </div>
                 </div>
 
-                <!-- Project 5 - Pokhara Commercial Building -->
                 <div class="project-card" data-type="commercial">
                     <div class="project-thumb" style="background-image: url('Engic-Group-Project-Image/Pokhara-Commercial-Building/Pokhara-Commercial-Building.png');"></div>
                     <div class="project-content">
@@ -446,7 +90,6 @@
                     </div>
                 </div>
 
-                <!-- Project 6 - Apartment Interior Upgrade -->
                 <div class="project-card" data-type="renovation">
                     <div class="project-thumb" style="background-image: url('Engic-Group-Project-Image/Apartment-Upgrade/Living-Room.jpg');"></div>
                     <div class="project-content">
@@ -456,7 +99,6 @@
                     </div>
                 </div>
 
-                <!-- Project 7 - Bhaktapur Heritage Home -->
                 <div class="project-card" data-type="residential">
                     <div class="project-thumb" style="background-image: url('https://placehold.co/800x450/1F4E96/ffffff?text=Bhaktapur+Heritage+Home');"></div>
                     <div class="project-content">
@@ -466,7 +108,6 @@
                     </div>
                 </div>
 
-                <!-- Project 8 - Banepa Hillside Villa -->
                 <div class="project-card" data-type="residential">
                     <div class="project-thumb" style="background-image: url('https://placehold.co/800x450/163C75/ffffff?text=Banepa+Hillside+Villa');"></div>
                     <div class="project-content">
@@ -476,7 +117,6 @@
                     </div>
                 </div>
 
-                <!-- Project 9 - Hetauda Industrial Park -->
                 <div class="project-card" data-type="commercial">
                     <div class="project-thumb" style="background-image: url('https://placehold.co/800x450/2D6A4F/ffffff?text=Hetauda+Industrial+Park');"></div>
                     <div class="project-content">
@@ -486,7 +126,6 @@
                     </div>
                 </div>
 
-                <!-- Project 10 - Butwal Commercial Hub -->
                 <div class="project-card" data-type="commercial">
                     <div class="project-thumb" style="background-image: url('https://placehold.co/800x450/6B21A8/ffffff?text=Butwal+Commercial+Hub');"></div>
                     <div class="project-content">
@@ -496,7 +135,6 @@
                     </div>
                 </div>
 
-                <!-- Project 11 - Dhulikhel Resort Renovation -->
                 <div class="project-card" data-type="renovation">
                     <div class="project-thumb" style="background-image: url('https://placehold.co/800x450/3B82F6/ffffff?text=Dhulikhel+Resort');"></div>
                     <div class="project-content">
@@ -506,7 +144,6 @@
                     </div>
                 </div>
 
-                <!-- Project 12 - Biratnagar Apartment Complex -->
                 <div class="project-card" data-type="residential">
                     <div class="project-thumb" style="background-image: url('https://placehold.co/800x450/1F4E96/ffffff?text=Biratnagar+Apartment');"></div>
                     <div class="project-content">
@@ -515,54 +152,437 @@
                         <a href="project-biratnagar-apartment.html" class="project-link">View Project Details →</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Professional Footer Section for Projects - Clean & Minimal -->
-    <section class="projects-footer-section">
+    <!-- 4. STATS + CTA SECTION -->
+    <section class="ap-footer-section">
         <div class="container">
-            <div class="projects-footer-content">
-                <div class="projects-footer-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">12+</div>
-                        <div class="stat-label">Completed Projects</div>
+            <div class="ap-footer-content">
+
+                <div class="ap-stats-row">
+                    <div class="ap-stat">
+                        <div class="ap-stat-number">60<span>+</span></div>
+                        <div class="ap-stat-label">Completed Projects</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">50k+</div>
-                        <div class="stat-label">Sq. Ft. Built</div>
+                    <div class="ap-stat">
+                        <div class="ap-stat-number">50k<span>+</span></div>
+                        <div class="ap-stat-label">Sq. Ft. Built</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
+                    <div class="ap-stat">
+                        <div class="ap-stat-number">100<span>%</span></div>
+                        <div class="ap-stat-label">Client Satisfaction</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">8+</div>
-                        <div class="stat-label">Years Excellence</div>
+                    <div class="ap-stat">
+                        <div class="ap-stat-number">4<span>+</span></div>
+                        <div class="ap-stat-label">Years Excellence</div>
                     </div>
                 </div>
-                <div class="projects-footer-message">
-                    <h3>Building Nepal's Future, One Project at a Time</h3>
+
+                <div class="ap-message">
+                    <h2>Engineering Spaces That <span class="ap-accent">Last</span>.</h2>
                     <p>Every project in our portfolio reflects our commitment to quality, innovation, and sustainability.</p>
-                    <div class="footer-quote">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M10 11h-4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1zM3 14.5L6 11M18 11h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1zM21 14.5L18 11"/>
-                            <path d="M12 4v16M8 20h8"/>
-                        </svg>
-                        <p>"Quality is not an act, it is a habit."</p>
-                    </div>
-                    <a href="index.html#contact" class="projects-cta-btn">Start Your Project →</a>
+                    <a href="index.html#contact" class="ap-cta-btn">Start Your Project <span>→</span></a>
                 </div>
+
             </div>
         </div>
     </section>
+
 </main>
 
-<!-- Footer will be loaded here -->
 <div id="footer-placeholder"></div>
 
+<style>
+/* ============================================
+   ALL PROJECTS PAGE — Minimal Engineering
+   ============================================ */
+
+body.projects-page {
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(circle, rgba(31, 78, 150, 0.08) 1px, transparent 1px),
+        linear-gradient(to right, rgba(31, 78, 150, 0.022) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(31, 78, 150, 0.022) 1px, transparent 1px);
+    background-size: 24px 24px, 96px 96px, 96px 96px;
+}
+
+.projects-page section {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* ============================================
+   1. HERO
+   ============================================ */
+.projects-page .ap-hero {
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.projects-page .ap-hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.projects-page .ap-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(31, 78, 150, 0.15);
+}
+
+.projects-page .ap-hero h1 {
+    font-size: 54px;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #0a0a0a 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0 24px;
+}
+
+.projects-page .ap-accent {
+    background: linear-gradient(135deg, var(--primary) 0%, #3B82F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.projects-page .ap-hero p {
+    font-size: 18px;
+    color: #6b7280;
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   2. FILTERS — blue style
+   ============================================ */
+.projects-page .ap-filters {
+    padding: 0 0 48px;
+}
+
+.projects-page .filter-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-page .filter-btn {
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid var(--primary);
+    background: var(--accent-light);
+    color: var(--primary);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-family: inherit;
+    letter-spacing: 0.2px;
+}
+
+.projects-page .filter-btn:hover {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(31, 78, 150, 0.2);
+}
+
+.projects-page .filter-btn.active {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary-dark);
+    box-shadow: 0 6px 16px rgba(31, 78, 150, 0.25);
+}
+
+/* ============================================
+   3. PROJECTS GRID
+   ============================================ */
+.projects-page .ap-grid-section {
+    padding: 0 0 80px;
+}
+
+.projects-page .projects-grid-full {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
+}
+
+.projects-page .project-card {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+    border: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.projects-page .project-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(31, 78, 150, 0.3);
+}
+
+.projects-page .project-thumb {
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.06);
+}
+
+.projects-page .project-thumb::after {
+    display: none;
+}
+
+.projects-page .project-content {
+    padding: 24px;
+}
+
+.projects-page .project-content h4 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #0a0a0a;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+}
+
+.projects-page .project-content p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 16px;
+}
+
+.projects-page .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+    letter-spacing: 0.2px;
+}
+
+.projects-page .project-link:hover {
+    gap: 10px;
+}
+
+/* ============================================
+   4. STATS + CTA
+   ============================================ */
+.projects-page .ap-footer-section {
+    padding: 80px 0 100px;
+    border-top: 1px solid rgba(10, 10, 10, 0.06);
+}
+
+.projects-page .ap-footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.projects-page .ap-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 900px;
+    margin: 0 auto 72px;
+    border-top: 1px solid rgba(31, 78, 150, 0.12);
+    border-bottom: 1px solid rgba(31, 78, 150, 0.12);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.projects-page .ap-stat {
+    padding: 40px 24px;
+    text-align: left;
+    border-left: 1px solid rgba(31, 78, 150, 0.1);
+}
+
+.projects-page .ap-stat:first-child {
+    border-left: none;
+}
+
+.projects-page .ap-stat-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: #0a0a0a;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 10px;
+    font-variant-numeric: tabular-nums;
+}
+
+.projects-page .ap-stat-number span {
+    color: var(--primary);
+}
+
+.projects-page .ap-stat-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280;
+    letter-spacing: 0.3px;
+}
+
+.projects-page .ap-message {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-page .ap-message h2 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #0a0a0a;
+    margin: 0 0 16px;
+    line-height: 1.2;
+}
+
+.projects-page .ap-message p {
+    font-size: 17px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0 0 32px;
+}
+
+.projects-page .ap-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease;
+}
+
+.projects-page .ap-cta-btn:hover {
+    background: var(--primary-dark);
+    gap: 14px;
+}
+
+.projects-page .ap-cta-btn span {
+    transition: transform 0.3s ease;
+}
+
+.projects-page .ap-cta-btn:hover span {
+    transform: translateX(2px);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .projects-page .projects-grid-full {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .projects-page .ap-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .projects-page .ap-stat:nth-child(3) {
+        border-left: none;
+    }
+    .projects-page .ap-stat:nth-child(n+3) {
+        border-top: 1px solid rgba(31, 78, 150, 0.1);
+    }
+}
+
+@media (max-width: 900px) {
+    .projects-page .ap-hero {
+        padding: 100px 0 60px;
+    }
+    .projects-page .ap-hero h1 {
+        font-size: 38px;
+    }
+    .projects-page .ap-hero p {
+        font-size: 16px;
+    }
+    .projects-page .ap-message h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-page .projects-grid-full {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .projects-page .ap-hero h1 {
+        font-size: 30px;
+    }
+    .projects-page .ap-stat-number {
+        font-size: 36px;
+    }
+    .projects-page .ap-message h2 {
+        font-size: 26px;
+    }
+    .projects-page .ap-message p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-page .ap-hero {
+        padding: 80px 0 50px;
+    }
+    .projects-page .ap-hero h1 {
+        font-size: 26px;
+    }
+    .projects-page .filter-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    .projects-page .filter-buttons {
+        gap: 8px;
+    }
+    .projects-page .ap-stats-row {
+        grid-template-columns: 1fr;
+    }
+    .projects-page .ap-stat {
+        border-left: none;
+        border-top: 1px solid rgba(31, 78, 150, 0.1);
+        padding: 28px 20px;
+    }
+    .projects-page .ap-stat:first-child {
+        border-top: none;
+    }
+    .projects-page .ap-stat-number {
+        font-size: 32px;
+    }
+    .projects-page .ap-footer-section {
+        padding: 60px 0 80px;
+    }
+}
+</style>
+
 <script>
-    // Load header and footer
+    // Load header
     fetch('header.html')
         .then(response => response.text())
         .then(data => {
@@ -588,24 +608,25 @@
         })
         .catch(error => console.error('Error loading header:', error));
 
+    // Load footer
     fetch('footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
         })
         .catch(error => console.error('Error loading footer:', error));
-    
+
     // Filter functionality
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
-    
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            
+
             const filterValue = btn.getAttribute('data-filter');
-            
+
             projectCards.forEach(card => {
                 if (filterValue === 'all' || card.getAttribute('data-type') === filterValue) {
                     card.style.display = 'block';
